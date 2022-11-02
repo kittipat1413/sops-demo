@@ -27,4 +27,5 @@ jobs:
 
       - name: SOPS
         run: |
+          cat demo.enc.env
           sops -d demo.enc.env
