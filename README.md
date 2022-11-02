@@ -1,3 +1,6 @@
+[Encrypting your files using Mozilla SOPS](https://dev.to/kittipat1413/encrypting-your-files-using-mozilla-sops-33fd)
+
+### Generate a key
 ```bash
 gpg --batch --full-generate-key --rfc4880 --digest-algo sha512 --cert-digest-algo sha512 <<EOF
 %no-protection
