@@ -17,3 +17,9 @@ jobs:
         with:
           version: 'latest' 
         id: install
+        
+      - name: Configure GPG Key
+        env:
+          GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
+        run: |
+          echo -n "$GPG_SIGNING_KEY" | base64 --decode | gpg --import
